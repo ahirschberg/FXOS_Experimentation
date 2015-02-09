@@ -11,6 +11,16 @@
          so we use a script file. -->
     <script src="app.js" defer></script>
     <style>
+      @font-face {
+    font-family: 'Press Start 2P';
+    src: url(PressStart2P-Regular.ttf);
+    font-weight:400;
+}
+      @font-face {
+        font-family: 'Oswald';
+        src: url(Oswald-Bold.ttf);
+        font-weight: 400;
+      }
       div {
 	position: relative;
     color: rgba(255,255,255,1);
@@ -52,18 +62,18 @@ div:active {
         font-size: 1em;
         padding: 4px;
       }
+      h1 {
+        font-family: 'Oswald';
+      }
     </style>
   </head>
 
   <body>
     <!-- This code is in the public domain. Enjoy! -->
-    <h1>Push The Button</h1>
-    <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700' rel='stylesheet' type='text/css'>
+    <h1 style="text-align: center; display: block">Push The Button</h1>
     <div id="buttonPressed">Push me!</div>
-    <iframe><link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
-      <span id="clicksId"></span><br>
-      <span id="textId"></span><br>
-    </iframe>
+    <span style="text-align: center; display: block" id="clicksId"></span><br>
+    <span id="textId"></span><br>
     Level: <span id="levelId" style="font-weight: 800"></span><span id="faderId"></span>
     <span id="coinsId"></span>
     <span id="gemsId"></span>

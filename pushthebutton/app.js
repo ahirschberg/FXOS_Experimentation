@@ -26,46 +26,47 @@ buttonPressed.onclick = function(){
   checkExp();
   switch(clicks){
     case 1:
-      $("#textId").text("Good start");
+      checkText("Good start");
       giveExp(10);
       break;
     case 5:
+      checkText("5! Nice!");
       giveExp(10);
       break;
     case 10:
-      $("#textId").text("Check out the store below to get some upgrades!");
+      checkText("Check out the store below to get some upgrades!");
       giveExp(25);
       break;
     case 15:
-      setText("Nice! 15! You can afford some more upgrades now!");
+      checkText("Nice! 15! You can afford some more upgrades now!");
       giveExp(25);
       break;
     case 25:
-      setText("Ooooh! 25! Keep going!");
+      checkText("Ooooh! 25! Keep going!");
       giveExp(50);
       break;
     case 50:
-      setText("50! Wow!");
+      checkText("50! Wow!");
       giveExp(50);
       break;
     case 76:
-      setText("You may now fish lobster. -Aki");
+      checkText("You may now fish lobster. -Aki");
       giveExp(100);
       break;
     case 100:
-      setText("100 already? That was fast!");
+      checkText("100 already? That was fast!");
       giveExp(100);
       break;
     case 250:
-      setText("Congradulations, you beat Aki's record.");
+      checkText("Congradulations, you beat Aki's record.");
       giveExp(500);
       break;
     case 500:
-      setText("500? This is going on the highscores!");
+      checkText("500? This is going on the highscores!");
       giveExp(500);
       break;
     case 1000000000:
-      setText("YOU'VE ACHIEVED AN AWARD: GOOFY GOOBER");
+      checkText("YOU'VE ACHIEVED AN AWARD: GOOFY GOOBER");
       giveExp(50000);
       // Give achievement, 1000 coins, 5 gems, 2 minutes of 'premium' gameplay, and an award
       break;
@@ -116,6 +117,37 @@ function checkExp(){
         $("#levelId").slideToggle();
       })
     }
+  }
+}
+function checkText(newtext){
+  console.log("Newtext.length is " + newtext.length);
+  if(newtext.length >= 15){
+    if(newtext.length >= 30){
+      if(newtext.length >= 40){
+        $("#textId").animate({
+        "font-size":"5pt"
+      });
+      console.log("setsize to 5");
+      $("#textId").text(newtext);
+      }
+      else{
+        $("#textId").animate({
+        "font-size":"7pt"
+      });
+      console.log("setsize to 7");
+      $("#textId").text(newtext);
+      }
+    }
+    else{
+      $("#textId").animate({
+        "font-size":"10pt"
+      });
+      $("#textId").text(newtext);
+      console.log("setsize to 10");
+    }
+  }
+  else{
+    $("#textId").text(newtext);
   }
 }
 function coins(amount){

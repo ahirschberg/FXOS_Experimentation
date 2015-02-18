@@ -1,0 +1,67 @@
+html, body {
+  margin: 0;
+  padding: 0.5rem;
+}
+
+body {
+  font-size: 1rem;
+  background: #fff;
+}
+
+h1 {
+  margin: 0 0 1rem 0;
+}
+
+p {
+  font-size: inherit;
+}
+
+div.ui-button {
+  color: #FFF;
+  border-radius: 3px;
+  margin: 5px;
+  margin-bottom: 12px;
+  padding: 20px;
+  background-color: #F8D335;
+  background: linear-gradient(to bottom, #efc23b 0%,#f2a635 78%);
+  box-shadow: 0px 7px 0px 0px rgb(255, 132, 0);
+  font-weight: 800;
+  font-family: Verdana;
+  font-size: 15pt;
+  
+  width: 150px;
+  /*min-height: 50px;
+  line-height: 50px;*/
+  
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+div.ui-button:active {
+  top: 4px;
+  box-shadow: 0px 3px 0px 0px rgb(216, 112, 0);
+}
+.center {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+a {
+  text-decoration: none;
+}
+
+div.console {
+  background: black;
+  font-family: monospace;
+  color: white;
+}
+div.console pre {
+  margin: 0;
+  padding: 0;
+}

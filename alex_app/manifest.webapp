@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "name": "Experiment",
+  "name": "Alex_App",
   "description": "A template with the bare minimum structure",
   "launch_path": "/index.html",
   "icons": {
@@ -14,7 +14,11 @@
     "url": "http://example.com"
   },
   "type": "privileged",
-  "permissions": {},
+  "permissions": {
+    "camera": {
+      "description": "Required for accessing cameras on the device."
+    }
+  },
   "installs_allowed_from": [
     "*"
   ],
